@@ -68,41 +68,100 @@ section h2 {
 ================================= */
 
 #home {
-    text-align: center;
-    padding-top: 120px;
-    padding-bottom: 120px;
     background-color: white;
+    padding: 100px 10%;
 }
 
-#home h1 {
+.home-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-text h1 {
     font-size: 48px;
     margin-bottom: 10px;
 }
 
-#home h2 {
+.home-text h2 {
+    text-align: left;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-#home p {
-    max-width: 700px;
-    margin: 0 auto 30px;
+.home-text p {
+    max-width: 650px;
+    margin-bottom: 30px;
 }
 
-#home a {
+.home-text a {
     display: inline-block;
-    margin: 10px;
+    margin-right: 10px;
     padding: 12px 25px;
+
     background-color: #1f2937;
     color: white;
+
     text-decoration: none;
     border-radius: 6px;
 }
 
-#home a:hover {
+.home-text a:hover {
     background-color: #374151;
 }
 
+
+/* Profile Image */
+
+.home-image {
+    flex: 0 0 350px;
+    text-align: center;
+}
+
+.home-image img {
+    width: 320px;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #1f2937;
+}
+
+
+/* Mobile Home */
+
+@media (max-width: 768px) {
+
+    .home-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-text h2 {
+        text-align: center;
+    }
+
+    .home-image {
+        flex: none;
+    }
+
+    .home-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+}
 
 /* ==============================
    About Section
